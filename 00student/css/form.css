@@ -137,3 +137,13 @@ tr:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     /* 미묘한 그림자 효과 추가 */
 }
+
+/* 폼 필드들을 그리드 레이아웃으로 배치하는 스타일입니다 */
+.form-grid {
+    display: grid;
+    /* CSS Grid 레이아웃 사용 */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* 반응형 그리드: 최소 250px, 자동 조정 */
+    gap: 15px;
+    /* 그리드 항목 간 15픽셀 간격 설정 (수정됨: 원래 15px) */
+}

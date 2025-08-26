@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>학생 관리 시스템</title>
-    <style type="text/css">
-        
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="./css/form.css"/>
 </head>
+
 <body>
     <h1>학생 관리 시스템</h1>
 
@@ -25,15 +24,11 @@
             <input type="text" name="address" id="address" required>
 
             <label for="phoneNumber">전화번호:</label>
-            <input type="text" name="phoneNumber" id="phoneNumber"
-                placeholder="00*-000*-0000"
-                pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}"
-                required>
+            <input type="text" name="phoneNumber" id="phoneNumber" placeholder="00*-000*-0000"
+                pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}" required>
 
             <label for="email">이메일:</label>
-            <input type="email" name="eamil" id="email"
-                placeholder="***@***.***"
-                required>
+            <input type="email" name="eamil" id="email" placeholder="***@***.***" required>
 
             <label for="dateOfBirth">생년월일:</label>
             <input type="date" name="dateOfBirth" id="dateOfBirth">
@@ -60,4 +55,5 @@
         </table>
     </div>
 </body>
+
 </html>

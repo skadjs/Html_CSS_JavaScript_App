@@ -165,3 +165,11 @@ tr:hover {
     font-weight: 500;
     /* 라벨 텍스트를 조금 더 굵게 표시*/
 }
+
+/* 폼 그룹 내의 입력 필드 스타일을 설정합니다 */
+.form-group input {
+    margin-bottom: 10px;
+    /* 입력 필드 아래에 10픽셀 여백 */
+    box-sizing: border-box;
+    /* 패딩과 테두리를 width에 포함 */
+}

@@ -86,6 +86,16 @@
       //DOM 엘리먼트 가져오기
       const studentForm = document.getElementById("studentForm");
       const studentTableBody = document.getElementById("studentTableBody");
+
+      //Document Load 이벤트 처리하기
+      document.addEventListener("DOMContentLoaded", function() {
+          LoadStudents();
+      });
+      
+      //Student(학생) 목록을 Load 하는 함수
+      function LoadStudents() {
+        console.log("학생 목록 Load 중...");
+      }
     </script>
 </body>
 

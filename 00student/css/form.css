@@ -147,3 +147,13 @@ tr:hover {
     gap: 15px;
     /* 그리드 항목 간 15픽셀 간격 설정 (수정됨: 원래 15px) */
 }
+
+/* 각 폼 그룹의 스타일을 설정합니다 */
+.form-group {
+    display: flex;
+    /* Flexbox 레이아웃 사용 */
+    flex-direction: column;
+    /* 자식 요소들을 세로로 배치 */
+    margin-bottom: 15px;
+    /* 각 form-group 아래에 15픽셀 여백 추가*/
+}

@@ -32,6 +32,56 @@ studentForm.addEventListener("submit", function () {
     }
 }); //submit 이벤트
 
+//입력항목의 값의 유효성을 체크하는 함수
+function validateStudent(student) {// 필수 필드 검사
+    if (!student.name) {
+        alert("이름을 입력해주세요.");
+        return false;
+    }
+
+    if (!student.studentNumber) {
+        alert("학번을 입력해주세요.");
+        return false;
+    }
+    // 학번 형식 검사 (예: 영문과 숫자 조합)
+    //const studentNumberPattern = /^[A-Za-z0-9]+$/;
+    const studentNumberPattern = /^[A-Za-z]\d{5}$/;
+    if (!studentNumberPattern.test(student.studentNumber)) {
+        alert("학번은 영문(S)과 숫자(5자리)만 입력 가능합니다.");
+        return false;
+    }
+
+    if (!student.address) {
+        alert("주소를 입력해주세요.");
+        return false;
+    }
+
+    if (!student.phoneNumber) {
+        alert("전화번호를 입력해주세요.");
+        return false;
+    }
+
+    if (!student.email) {
+        alert("이메일을 입력해주세요.");
+        return false;
+    }
+
+    // 전화번호 형식 검사
+    const phonePattern = /^[0-9-\s]+$/;
+    if (!phonePattern.test(student.phoneNumber)) {
+        alert("올바른 전화번호 형식이 아닙니다.");
+        return false;
+    }
+
+    // 이메일 형식 검사 (입력된 경우에만)
+    if (student.email && !isValidEmail(student.email)) {
+        alert("올바른 이메일 형식이 아닙니다.");
+        return false;
+    }
+
+    return true;
+}//validateStudent
+
 //Student(학생) 목록을 Load하는 함수
 function LoadStudent() {
     console.log("학생 목록 Load 중...");

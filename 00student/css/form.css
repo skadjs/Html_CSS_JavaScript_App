@@ -157,3 +157,11 @@ tr:hover {
     margin-bottom: 15px;
     /* 각 form-group 아래에 15픽셀 여백 추가*/
 }
+
+/* 폼 그룹 내의 라벨 스타일을 설정합니다 */
+.form-group label {
+    margin-bottom: 5px;
+    /* 라벨 아래에 5픽셀의 여백 추가 */
+    font-weight: 500;
+    /* 라벨 텍스트를 조금 더 굵게 표시*/
+}

@@ -94,12 +94,13 @@
       
       //StudentForm의 submit 이벤트 처리하기
       studentForm.addEventListener("submit", function() {
-        console.Log("Form이 제출되었음...");
+        event.preventDefault(); //기본으로 설정된 Event의 실행을 막음.
+        console.log("Form이 제출되었음...");
       });
 
       //Student(학생) 목록을 Load하는 함수
       function LoadStudent() {
-          console.Log("학생 목록 Load 중...");
+        console.log("학생 목록 Load 중...");
       }
 
     </script>

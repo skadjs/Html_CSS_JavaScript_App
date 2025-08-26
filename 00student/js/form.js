@@ -30,6 +30,11 @@ studentForm.addEventListener("submit", function () {
         email: stuFormData.get("email").trim(),
         dateOfBirth: stuFormData.get("dateOfBirth"),
     }
+    //유효성 체크하는 함수 호출하기
+    if(!validateStudent(studentData)) {
+        //검증체크 실패하면 리턴하기
+        return;
+    }
 }); //submit 이벤트
 
 //입력항목의 값의 유효성을 체크하는 함수
@@ -80,7 +85,7 @@ function validateStudent(student) {// 필수 필드 검사
     }
 
     return true;
-}//validateStudent
+} //validateStudent
 
 //Student(학생) 목록을 Load하는 함수
 function LoadStudent() {

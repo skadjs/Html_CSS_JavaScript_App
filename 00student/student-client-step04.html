@@ -94,9 +94,15 @@
       
       //StudentForm의 submit 이벤트 처리하기
       studentForm.addEventListener("submit", function() {
-        event.preventDefault(); //기본으로 설정된 Event의 실행을 막음.
-        console.log("Form이 제출되었음...");
-      });
+          event.preventDefault(); //기본으로 설정된 Event의 실행을 막음.
+          console.log("Form이 제출되었음...");
+
+          //FormData 객체 생성: <form>엘리먼트를 객체로 변환
+          const stuFormData = new FormData(studentForm);
+          stuFormData.forEach((value, key) => {
+            console.log(key + ' = ' + value);
+          });
+      }); //submit 이벤트
 
       //Student(학생) 목록을 Load하는 함수
       function LoadStudent() {

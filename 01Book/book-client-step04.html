@@ -68,6 +68,37 @@
         const bookForm = document.getElementById("bookForm");
         const bookTableBody = document.getElementById("bookTableBody");
 
+        //Document Load 이벤트 처리하기
+        document.addEventListener("DOMContentLoaded", function() {
+            LoadBook();
+        })
+
+        //BookForm의 submit 이벤트 처리하기
+        bookForm.addEventListener("submit", function() {
+            event.preventDefault(); //기본으로 설정된 Event의 실행을 막음.
+            console.log("Form이 제출되었습니다!");
+
+            //FormData 객체 생성: <form>엘리먼트를 객체로 변환
+            const bookFormData = new FormData(bookForm);
+            bookFormData.forEach((value, key) => {
+                console.log(key + ' = ' + value);
+            });
+
+            //사용자 정의 Book Object Literal 객체 생성 (공백 제거 trim())
+            const boookData = {
+                title: bookFormData.get("title").trim(),
+                author: bookFormData.get("author").trim(),
+                isbn: bookFormData.get("isbn").trim(),
+                price: bookFormData.get("price").trim(),
+                publishDate: bookFormData.get("publishDate").trim(),
+            }
+        }); //submit 이벤트
+
+        //Book(책) 목록을 Load하는 함수
+        function LoadBook() {
+            console.log("책 목록을 Load 중입니다!");
+        }
+
     </script>
 </body>
 

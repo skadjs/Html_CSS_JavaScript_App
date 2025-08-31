@@ -233,37 +233,37 @@ tr:nth-child(even) {
     body {
         padding: 10px;
     }
-
+    
     .form-container,
     .table-container {
         padding: 15px;
         margin-bottom: 15px;
     }
-
+    
     .form-grid {
         grid-template-columns: 1fr;
         gap: 10px;
     }
-
+    
     .button-group {
         text-align: center;
     }
-
+    
     .button-group button {
         display: block;
         width: 100%;
         margin-bottom: 10px;
     }
-
+    
     table {
         font-size: 12px;
     }
-
+    
     th,
     td {
         padding: 8px 5px;
     }
-
+    
     .action-buttons button {
         display: block;
         width: 100%;
@@ -276,22 +276,21 @@ tr:nth-child(even) {
     h1 {
         font-size: 24px;
     }
-
+    
     h2 {
         font-size: 18px;
     }
-
+    
     .table-container {
         overflow-x: auto;
     }
-
+    
     table {
         min-width: 600px;
     }
-
+    
     input,
     button {
-        font-size: 16px;
-        /* iOS에서 확대 방지 */
+        font-size: 16px; /* iOS에서 확대 방지 */
     }
 }
